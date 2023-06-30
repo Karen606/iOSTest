@@ -14,8 +14,17 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitle()
+        setLocation()
+        setPhoto()
         setupTableView()
         getCategories()
+    }
+    
+    func setTitle() {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        let attrString: [NSAttributedString.Key: Any] = [.font: UIFont(name: "SFProDisplay-Medium", size: 18) ?? .systemFont(ofSize: 18), .foregroundColor: UIColor.black]
+        navigationController?.navigationBar.titleTextAttributes = attrString
     }
     
     func setupTableView() {
@@ -25,7 +34,8 @@ class MainPageViewController: UIViewController {
     }
     
     func getCategories() {
-        mainPageViewModel.getCategories { result in
+        mainPageViewModel.getCategories { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let data):
                 self.categories = data.сategories
@@ -58,5 +68,9 @@ extension MainPageViewController: UITableViewDataSource {
 }
 
 extension MainPageViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let categoryVC = CategoryViewController(nibName: "CategoryViewController", bundle: nil)
+        categoryVC.title = categories[indexPath.section].name
+        self.navigationController?.pushViewController(categoryVC, animated: true)
+    }
 }
