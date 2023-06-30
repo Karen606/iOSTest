@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oEB-9f-gCw">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Поиск-->
+        <scene sceneID="Z1Q-ri-bv2">
+            <objects>
+                <viewController id="BbC-XV-Afa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEV-ki-iuT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zRV-Ut-hxY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Поиск" image="SearchIcon" id="Cyr-N8-VNJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rG1-id-YNv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1707" y="17"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="GJC-GW-nJQ">
+            <objects>
+                <viewController id="jLt-KA-0jc" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4BG-yD-FQa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WgZ-Vz-0JY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="HomeIconSelected" id="adq-0G-5Hd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khp-LD-2fQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2823" y="17"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RIF-dl-5Xp">
+            <objects>
+                <navigationController id="oEB-9f-gCw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bgG-4W-EJc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="AccentColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="5VJ-nL-VUC" kind="relationship" relationship="rootViewController" id="xCb-6K-6n0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xBp-yx-Sjx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2528" y="-706"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="uHJ-t3-RuI">
+            <objects>
+                <tabBarController id="5VJ-nL-VUC" customClass="TabBarViewController" customModule="iOSTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="BUw-rF-u9M"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uog-qa-jke">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" name="AccentColor"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jLt-KA-0jc" kind="relationship" relationship="viewControllers" id="gkh-5j-FMw"/>
+                        <segue destination="BbC-XV-Afa" kind="relationship" relationship="viewControllers" id="s5R-DU-Uu3"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="Ukd-Qn-6V8"/>
+                        <segue destination="tNr-sU-G4j" kind="relationship" relationship="viewControllers" id="0bs-sa-OoS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="81Q-4k-b8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1706" y="-706"/>
+        </scene>
+        <!--Корзина-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Корзина" image="BasketIcon" id="1f3-Ae-AKG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="17"/>
+        </scene>
+        <!--Аккаунт-->
+        <scene sceneID="iwm-Kr-no3">
+            <objects>
+                <viewController id="tNr-sU-G4j" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5aM-dA-voy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Krf-Xh-hy2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Аккаунт" image="AccountIcon" id="Cnh-Jb-wTf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uza-1q-KUK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="58" y="17"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="AccountIcon" width="28" height="28"/>
+        <image name="BasketIcon" width="28" height="28"/>
+        <image name="HomeIconSelected" width="28" height="28"/>
+        <image name="SearchIcon" width="24" height="24"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
