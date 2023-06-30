@@ -7,8 +7,7 @@
 
 import Foundation
 
-class MainPageViewModel {
-    
+class MainPageViewModel {    
     func getCategories(completion: @escaping(Result<CategoriesModel, NetworkError>) -> ()) {
         if !Connectivity.isConnectedToInternet() {
             return

@@ -8,11 +8,11 @@
 import Foundation
 
 struct CategoriesModel: Codable {
-    let сategories: [Сategory]
+    let сategories: [KitchenCategory]
 }
 
 // MARK: - Сategory
-struct Сategory: Codable {
+struct KitchenCategory: Codable {
     let id: Int
     let name: String
     let imageURL: String
