@@ -37,12 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8247BC6ADDF714EC9BB26B89 /* Pods_iOSTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		512D779FA6823908591BC1E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9EEB66768D979290763D40A5 /* Pods-iOSTest.debug.xcconfig */,
+				343A5A569AE2A4B953B86722 /* Pods-iOSTest.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A02E91BD7B5A3E5312985DD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B16D9D736E3428689F0228B7 /* Pods_iOSTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CE325C8F2A4F01BF00E2F552 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,11 +79,65 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		CE325C992A4F0B2E00E2F552 /* MainPage */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CAA2A4F11E200E2F552 /* ViewModel */,
+				CE325CA72A4F10FB00E2F552 /* Model */,
+				CE325C9D2A4F0BB700E2F552 /* Cell */,
+				CE325C9C2A4F0BA800E2F552 /* View */,
+			);
+			path = MainPage;
+			sourceTree = "<group>";
+		};
+		CE325C9C2A4F0BA800E2F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE325C9A2A4F0B6200E2F552 /* MainPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE325C9D2A4F0BB700E2F552 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CA02A4F0BEB00E2F552 /* CategoriesTableViewCell.swift */,
+				CE325CA12A4F0BEB00E2F552 /* CategoriesTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CE325CA42A4F0DA500E2F552 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CA52A4F0DC100E2F552 /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		CE325CA72A4F10FB00E2F552 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CA82A4F110D00E2F552 /* CategoriesModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE325CAA2A4F11E200E2F552 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CAB2A4F11FC00E2F552 /* MainPageModelView.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		CE60BD892A4E264B005A7029 = {
 			isa = PBXGroup;
 			children = (
 				CE60BD942A4E264B005A7029 /* iOSTest */,
 				CE60BD932A4E264B005A7029 /* Products */,
+				512D779FA6823908591BC1E3 /* Pods */,
+				A02E91BD7B5A3E5312985DD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,7 +152,9 @@
 		CE60BD942A4E264B005A7029 /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				CE325CA42A4F0DA500E2F552 /* NetworkManager */,
 				CE60BDA92A4E2678005A7029 /* TabBarController */,
+				CE325C992A4F0B2E00E2F552 /* MainPage */,
 				CE60BD952A4E264B005A7029 /* AppDelegate.swift */,
 				CE60BD972A4E264B005A7029 /* SceneDelegate.swift */,
 				CE325C8F2A4F01BF00E2F552 /* Resourses */,
@@ -107,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE60BDA62A4E2650005A7029 /* Build configuration list for PBXNativeTarget "iOSTest" */;
 			buildPhases = (
+				6E6DCBC1780F764666687513 /* [CP] Check Pods Manifest.lock */,
 				CE60BD8E2A4E264B005A7029 /* Sources */,
 				CE60BD8F2A4E264B005A7029 /* Frameworks */,
 				CE60BD902A4E264B005A7029 /* Resources */,
+				EE21984141DA4D03BED7385C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
