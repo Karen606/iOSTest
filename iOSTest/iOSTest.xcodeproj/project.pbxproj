@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CE325C8E2A4EECBC00E2F552 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325C8D2A4EECBC00E2F552 /* TabBarViewController.swift */; };
+		CE325C942A4F09C400E2F552 /* SFProDisplay-Medium.OTF in Resources */ = {isa = PBXBuildFile; fileRef = CE325C932A4F02D800E2F552 /* SFProDisplay-Medium.OTF */; };
+		CE325C952A4F09C600E2F552 /* SFProDisplay-Bold.OTF in Resources */ = {isa = PBXBuildFile; fileRef = CE325C922A4F02D200E2F552 /* SFProDisplay-Bold.OTF */; };
+		CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE325C972A4F0A1000E2F552 /* SFProDisplay-Regular.ttf */; };
 		CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD952A4E264B005A7029 /* AppDelegate.swift */; };
 		CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD972A4E264B005A7029 /* SceneDelegate.swift */; };
 		CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD9E2A4E2650005A7029 /* Assets.xcassets */; };
@@ -17,6 +20,9 @@
 
 /* Begin PBXFileReference section */
 		CE325C8D2A4EECBC00E2F552 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE325C922A4F02D200E2F552 /* SFProDisplay-Bold.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.OTF"; sourceTree = "<group>"; };
+		CE325C932A4F02D800E2F552 /* SFProDisplay-Medium.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.OTF"; sourceTree = "<group>"; };
+		CE325C972A4F0A1000E2F552 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
 		CE60BD922A4E264B005A7029 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE60BD952A4E264B005A7029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE60BD972A4E264B005A7029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +43,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE325C8F2A4F01BF00E2F552 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				CE325C902A4F01C400E2F552 /* Fonts */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		CE325C902A4F01C400E2F552 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CE325C922A4F02D200E2F552 /* SFProDisplay-Bold.OTF */,
+				CE325C972A4F0A1000E2F552 /* SFProDisplay-Regular.ttf */,
+				CE325C932A4F02D800E2F552 /* SFProDisplay-Medium.OTF */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CE60BD892A4E264B005A7029 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +83,7 @@
 				CE60BDA92A4E2678005A7029 /* TabBarController */,
 				CE60BD952A4E264B005A7029 /* AppDelegate.swift */,
 				CE60BD972A4E264B005A7029 /* SceneDelegate.swift */,
+				CE325C8F2A4F01BF00E2F552 /* Resourses */,
 				CE60BD9E2A4E2650005A7029 /* Assets.xcassets */,
 				CE60BDA02A4E2650005A7029 /* LaunchScreen.storyboard */,
 				CE60BDA32A4E2650005A7029 /* Info.plist */,
@@ -133,7 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE325C952A4F09C600E2F552 /* SFProDisplay-Bold.OTF in Resources */,
+				CE325C942A4F09C400E2F552 /* SFProDisplay-Medium.OTF in Resources */,
 				CE60BDA22A4E2650005A7029 /* LaunchScreen.storyboard in Resources */,
+				CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */,
 				CE60BDAB2A4E270A005A7029 /* TabBarViewController.storyboard in Resources */,
 				CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */,
 			);

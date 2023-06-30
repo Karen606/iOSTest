@@ -10,13 +10,17 @@ import UIKit
 class TabBarViewController: UITabBarController {
     
     lazy var personalInformationStackView
-: UIBarButtonItem = {
+    : UIBarButtonItem = {
         let cityLabel = UILabel()
         cityLabel.textAlignment = .left
         cityLabel.text = "Москва"
+        cityLabel.font = UIFont(name: "SFProDisplay-Medium", size: 18)
+        cityLabel.textColor = .black
         let dobLabel = UILabel()
         dobLabel.textAlignment = .left
         dobLabel.text = "26 Апреля, 1998"
+        dobLabel.font = UIFont(name: "SFProDisplay-Regular", size: 14)
+        dobLabel.textColor = .black.withAlphaComponent(0.5)
         let stackView = UIStackView(arrangedSubviews: [cityLabel, dobLabel])
         stackView.axis = .vertical
         let personalInformation = UIBarButtonItem(customView: stackView)
