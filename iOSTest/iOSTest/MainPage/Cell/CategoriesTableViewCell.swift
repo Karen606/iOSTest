@@ -8,6 +8,8 @@
 import UIKit
 
 class CategoriesTableViewCell: UITableViewCell {
+    
+    static let identifier = String(describing: CategoriesTableViewCell.self)
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,6 +20,11 @@ class CategoriesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 8, left: 16, bottom: 0, right: 16))
     }
     
 }
