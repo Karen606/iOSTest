@@ -25,6 +25,8 @@ class BasketViewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setPhoto()
+        setPersonalData()
         setupTableView()
     }
     

@@ -17,7 +17,7 @@
         <!--Поиск-->
         <scene sceneID="Z1Q-ri-bv2">
             <objects>
-                <viewController id="BbC-XV-Afa" sceneMemberID="viewController">
+                <viewController id="BbC-XV-Afa" customClass="SearchViewController" customModule="iOSTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NEV-ki-iuT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
         <!--Item-->
         <scene sceneID="cIe-RP-LIJ">
             <objects>
-                <navigationController id="1Na-MD-yHR" customClass="NavigationViewController" customModule="iOSTest" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="1Na-MD-yHR" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="ODO-8p-lQT"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HPc-r3-ZZe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -50,7 +50,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nm9-XI-cQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1286" y="-805"/>
+            <point key="canvasLocation" x="-2704" y="-806"/>
         </scene>
         <!--Главная-->
         <scene sceneID="GJC-GW-nJQ">
@@ -60,7 +60,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-E9-Qtm">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cyZ-E9-Qtm">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="-2704" y="1"/>
         </scene>
-        <!--Tab Bar View Controller-->
+        <!--Tab Bar Controller-->
         <scene sceneID="uHJ-t3-RuI">
             <objects>
-                <tabBarController id="5VJ-nL-VUC" customClass="TabBarViewController" customModule="iOSTest" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="5VJ-nL-VUC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="BUw-rF-u9M"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -94,14 +94,65 @@
                     </tabBar>
                     <connections>
                         <segue destination="1Na-MD-yHR" kind="relationship" relationship="viewControllers" id="Lee-4G-33y"/>
-                        <segue destination="BbC-XV-Afa" kind="relationship" relationship="viewControllers" id="QIS-SF-6X3"/>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="eLm-iH-Vq9"/>
-                        <segue destination="tNr-sU-G4j" kind="relationship" relationship="viewControllers" id="i7R-nT-hIB"/>
+                        <segue destination="lVF-HQ-2Am" kind="relationship" relationship="viewControllers" id="9DQ-T6-C8j"/>
+                        <segue destination="0Rx-2u-VFk" kind="relationship" relationship="viewControllers" id="47Y-5O-jw5"/>
+                        <segue destination="AgE-nr-35B" kind="relationship" relationship="viewControllers" id="3MX-6K-YfY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="81Q-4k-b8s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2030" y="-805"/>
+            <point key="canvasLocation" x="-4029" y="-806"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="n8Z-OF-uJK">
+            <objects>
+                <navigationController id="lVF-HQ-2Am" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="9lM-jf-nTV"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GpV-Yc-PxA">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BbC-XV-Afa" kind="relationship" relationship="rootViewController" id="65v-ct-hy6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H6V-Zu-DYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2030" y="-806"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="cXW-fS-j1l">
+            <objects>
+                <navigationController id="0Rx-2u-VFk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="HQV-dU-67c"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2U1-3f-0lD">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="HSD-8J-RMb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vUj-pd-dfu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1362" y="-806"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="48n-Gc-oEd">
+            <objects>
+                <navigationController id="AgE-nr-35B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cPk-uz-0s1"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ela-19-9T7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="tNr-sU-G4j" kind="relationship" relationship="rootViewController" id="Jf1-EY-qPl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDA-cM-P3o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-684" y="-806"/>
         </scene>
         <!--Корзина-->
         <scene sceneID="s0d-6b-0kx">
@@ -117,7 +168,7 @@
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.3921568627" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="16"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal">
+                                <state key="normal" title="Оплатить">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -129,7 +180,7 @@
                                     <action selector="clickedPay:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SKW-GD-TU4"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-7d-5JU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="sL9-7d-5JU">
                                 <rect key="frame" x="0.0" y="88" width="414" height="645"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -153,7 +204,7 @@
         <!--Аккаунт-->
         <scene sceneID="iwm-Kr-no3">
             <objects>
-                <viewController id="tNr-sU-G4j" sceneMemberID="viewController">
+                <viewController id="tNr-sU-G4j" customClass="AccountViewController" customModule="iOSTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5aM-dA-voy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

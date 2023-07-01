@@ -25,8 +25,8 @@ class DishViewController: UIViewController {
         if let dish = dish {
             dishImageView.load(str: dish.imageURL)
             dishNameLabel.text = dish.name
-            dishPriceLabel.text = "\(dish.price) ₽ "
-            dishWeightLabel.text = "\(dish.weight)г"
+            dishPriceLabel.text = "\(dish.price) ₽"
+            dishWeightLabel.text = ". \(dish.weight)г"
             dishDescriptionLabel.text = dish.description
         }
     }

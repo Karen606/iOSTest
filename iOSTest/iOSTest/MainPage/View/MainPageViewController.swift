@@ -15,7 +15,7 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTitle()
-        setLocation()
+        setPersonalData()
         setPhoto()
         setupTableView()
         getCategories()

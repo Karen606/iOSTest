@@ -23,8 +23,15 @@ class CategoryViewController: UIViewController {
     }
     private var selectedTeg: IndexPath? {
         didSet {
+            guard let selectedTeg = selectedTeg else { return }
             if let oldValue = oldValue {
-                dishesCollectionView.deselectItem(at: oldValue, animated: false)
+                guard oldValue != selectedTeg else { return }
+                if let cell = dishesCollectionView.cellForItem(at: oldValue) as? TegCollectionViewCell {
+                    cell.tegIsSelected = false
+                }
+            }
+            if let cell = dishesCollectionView.cellForItem(at: selectedTeg) as? TegCollectionViewCell {
+                cell.tegIsSelected = true
             }
             getSortedDishes()
         }
@@ -60,7 +67,6 @@ class CategoryViewController: UIViewController {
                 }})
                 self.dishes = data.dishes
                 self.selectedTeg = IndexPath(row: 0, section: Section.categories.rawValue)
-                self.dishesCollectionView.selectItem(at: IndexPath(row: 0, section: Section.categories.rawValue), animated: false, scrollPosition: .bottom)
             case .failure(let error):
                 print(error)
             }
@@ -72,7 +78,6 @@ class CategoryViewController: UIViewController {
         dishesCollectionView.dataSource = self
         dishesCollectionView.register(UINib(nibName: DishCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishCollectionViewCell.identifier)
         dishesCollectionView.register(UINib(nibName: TegCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TegCollectionViewCell.identifier)
-        dishesCollectionView.allowsMultipleSelection = true
     }
     
     func createLayout() -> UICollectionViewCompositionalLayout {
@@ -127,21 +132,6 @@ extension CategoryViewController: UICollectionViewDelegate {
             return
         }
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let determinedSection = Section(rawValue: indexPath.section)
-        switch determinedSection {
-        case .categories:
-            guard let selectedTeg = selectedTeg else { return }
-            if selectedTeg == indexPath {
-                dishesCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
-            }
-        case .dishes:
-            print("ok")
-        default:
-            return
-        }
-    }
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
@@ -166,6 +156,7 @@ extension CategoryViewController: UICollectionViewDataSource {
         switch section {
         case .categories:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TegCollectionViewCell.identifier, for: indexPath) as! TegCollectionViewCell
+            cell.tegIsSelected = selectedTeg == indexPath
             cell.setupContent(category: tegs[indexPath.row])
             return cell
         case .dishes:

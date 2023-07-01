@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8247BC6ADDF714EC9BB26B89 /* Pods_iOSTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B16D9D736E3428689F0228B7 /* Pods_iOSTest.framework */; };
-		CE325C8E2A4EECBC00E2F552 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325C8D2A4EECBC00E2F552 /* TabBarViewController.swift */; };
 		CE325C942A4F09C400E2F552 /* SFProDisplay-Medium.OTF in Resources */ = {isa = PBXBuildFile; fileRef = CE325C932A4F02D800E2F552 /* SFProDisplay-Medium.OTF */; };
 		CE325C952A4F09C600E2F552 /* SFProDisplay-Bold.OTF in Resources */ = {isa = PBXBuildFile; fileRef = CE325C922A4F02D200E2F552 /* SFProDisplay-Bold.OTF */; };
 		CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE325C972A4F0A1000E2F552 /* SFProDisplay-Regular.ttf */; };
@@ -33,18 +32,19 @@
 		CE325CE02A50235E00E2F552 /* BasketViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CDF2A50235E00E2F552 /* BasketViewViewController.swift */; };
 		CE325CE42A5025D500E2F552 /* BasketDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE22A5025D400E2F552 /* BasketDishTableViewCell.swift */; };
 		CE325CE52A5025D500E2F552 /* BasketDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE325CE32A5025D400E2F552 /* BasketDishTableViewCell.xib */; };
+		CE325CE92A50779C00E2F552 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE82A50779C00E2F552 /* SearchViewController.swift */; };
+		CE325CEB2A5077AA00E2F552 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CEA2A5077AA00E2F552 /* AccountViewController.swift */; };
 		CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD952A4E264B005A7029 /* AppDelegate.swift */; };
 		CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD972A4E264B005A7029 /* SceneDelegate.swift */; };
 		CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD9E2A4E2650005A7029 /* Assets.xcassets */; };
 		CE60BDA22A4E2650005A7029 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE60BDA02A4E2650005A7029 /* LaunchScreen.storyboard */; };
-		CE60BDAB2A4E270A005A7029 /* TabBarViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE60BDAA2A4E270A005A7029 /* TabBarViewController.storyboard */; };
+		CE60BDAB2A4E270A005A7029 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE60BDAA2A4E270A005A7029 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		343A5A569AE2A4B953B86722 /* Pods-iOSTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTest.release.xcconfig"; path = "Target Support Files/Pods-iOSTest/Pods-iOSTest.release.xcconfig"; sourceTree = "<group>"; };
 		9EEB66768D979290763D40A5 /* Pods-iOSTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSTest.debug.xcconfig"; path = "Target Support Files/Pods-iOSTest/Pods-iOSTest.debug.xcconfig"; sourceTree = "<group>"; };
 		B16D9D736E3428689F0228B7 /* Pods_iOSTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE325C8D2A4EECBC00E2F552 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		CE325C922A4F02D200E2F552 /* SFProDisplay-Bold.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.OTF"; sourceTree = "<group>"; };
 		CE325C932A4F02D800E2F552 /* SFProDisplay-Medium.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.OTF"; sourceTree = "<group>"; };
 		CE325C972A4F0A1000E2F552 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
@@ -69,13 +69,15 @@
 		CE325CDF2A50235E00E2F552 /* BasketViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewViewController.swift; sourceTree = "<group>"; };
 		CE325CE22A5025D400E2F552 /* BasketDishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDishTableViewCell.swift; sourceTree = "<group>"; };
 		CE325CE32A5025D400E2F552 /* BasketDishTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketDishTableViewCell.xib; sourceTree = "<group>"; };
+		CE325CE82A50779C00E2F552 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CE325CEA2A5077AA00E2F552 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CE60BD922A4E264B005A7029 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE60BD952A4E264B005A7029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE60BD972A4E264B005A7029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE60BD9E2A4E2650005A7029 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE60BDA12A4E2650005A7029 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE60BDA32A4E2650005A7029 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE60BDAA2A4E270A005A7029 /* TabBarViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarViewController.storyboard; sourceTree = "<group>"; };
+		CE60BDAA2A4E270A005A7029 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,8 +191,8 @@
 		CE325CB02A4F22BE00E2F552 /* CategoryPage */ = {
 			isa = PBXGroup;
 			children = (
-				CE325CC62A4F343600E2F552 /* ViewModel */,
 				CE325CBB2A4F2F5C00E2F552 /* Cell */,
+				CE325CC62A4F343600E2F552 /* ViewModel */,
 				CE325CB82A4F2A5A00E2F552 /* Model */,
 				CE325CB12A4F22EB00E2F552 /* View */,
 			);
@@ -292,6 +294,22 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CE325CE62A50777700E2F552 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CE82A50779C00E2F552 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CE325CE72A50778200E2F552 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CEA2A5077AA00E2F552 /* AccountViewController.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
 		CE60BD892A4E264B005A7029 = {
 			isa = PBXGroup;
 			children = (
@@ -313,13 +331,15 @@
 		CE60BD942A4E264B005A7029 /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
-				CE325CD92A50230E00E2F552 /* Basket */,
-				CE325CD32A500C9900E2F552 /* Dish */,
 				CE325CAD2A4F1D6300E2F552 /* Extension */,
 				CE325CA42A4F0DA500E2F552 /* NetworkManager */,
-				CE60BDA92A4E2678005A7029 /* TabBarController */,
-				CE325C992A4F0B2E00E2F552 /* MainPage */,
+				CE325CE72A50778200E2F552 /* Account */,
+				CE325CE62A50777700E2F552 /* Search */,
+				CE325CD92A50230E00E2F552 /* Basket */,
+				CE325CD32A500C9900E2F552 /* Dish */,
 				CE325CB02A4F22BE00E2F552 /* CategoryPage */,
+				CE325C992A4F0B2E00E2F552 /* MainPage */,
+				CE60BDAA2A4E270A005A7029 /* Main.storyboard */,
 				CE60BD952A4E264B005A7029 /* AppDelegate.swift */,
 				CE60BD972A4E264B005A7029 /* SceneDelegate.swift */,
 				CE325C8F2A4F01BF00E2F552 /* Resourses */,
@@ -328,15 +348,6 @@
 				CE60BDA32A4E2650005A7029 /* Info.plist */,
 			);
 			path = iOSTest;
-			sourceTree = "<group>";
-		};
-		CE60BDA92A4E2678005A7029 /* TabBarController */ = {
-			isa = PBXGroup;
-			children = (
-				CE60BDAA2A4E270A005A7029 /* TabBarViewController.storyboard */,
-				CE325C8D2A4EECBC00E2F552 /* TabBarViewController.swift */,
-			);
-			path = TabBarController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,7 +420,7 @@
 				CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */,
 				CE325CC52A4F337600E2F552 /* TegCollectionViewCell.xib in Resources */,
 				CE325CD82A500CD500E2F552 /* DishViewController.xib in Resources */,
-				CE60BDAB2A4E270A005A7029 /* TabBarViewController.storyboard in Resources */,
+				CE60BDAB2A4E270A005A7029 /* Main.storyboard in Resources */,
 				CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,12 +478,13 @@
 				CE325CC82A4F344A00E2F552 /* CategoryViewModel.swift in Sources */,
 				CE325CB62A4F283400E2F552 /* CategoryViewController.swift in Sources */,
 				CE325CAC2A4F11FC00E2F552 /* MainPageViewModel.swift in Sources */,
+				CE325CE92A50779C00E2F552 /* SearchViewController.swift in Sources */,
 				CE325CA62A4F0DC100E2F552 /* NetworkManager.swift in Sources */,
+				CE325CEB2A5077AA00E2F552 /* AccountViewController.swift in Sources */,
 				CE325CBA2A4F2A6B00E2F552 /* DishesModel.swift in Sources */,
 				CE325CE02A50235E00E2F552 /* BasketViewViewController.swift in Sources */,
 				CE325C9B2A4F0B6300E2F552 /* MainPageViewController.swift in Sources */,
 				CE325CAF2A4F1D7600E2F552 /* UIImageView+Extension.swift in Sources */,
-				CE325C8E2A4EECBC00E2F552 /* TabBarViewController.swift in Sources */,
 				CE325CC42A4F337600E2F552 /* TegCollectionViewCell.swift in Sources */,
 				CE325CD72A500CD500E2F552 /* DishViewController.swift in Sources */,
 				CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */,
@@ -626,7 +638,7 @@
 				INFOPLIST_FILE = iOSTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBarViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -654,7 +666,7 @@
 				INFOPLIST_FILE = iOSTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = TabBarViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

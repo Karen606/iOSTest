@@ -85,8 +85,8 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dy5-QQ-noy">
-                            <rect key="frame" x="16" y="246" width="65" height="17"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dy5-QQ-noy">
+                            <rect key="frame" x="16" y="246" width="67" height="17"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87p-G5-pdl">
                                     <rect key="frame" x="0.0" y="0.0" width="32.5" height="17"/>
@@ -95,7 +95,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5lw-3D-uvs">
-                                    <rect key="frame" x="32.5" y="0.0" width="32.5" height="17"/>
+                                    <rect key="frame" x="34.5" y="0.0" width="32.5" height="17"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uij-qb-tv9">
                                             <rect key="frame" x="0.0" y="0.0" width="32.5" height="17"/>

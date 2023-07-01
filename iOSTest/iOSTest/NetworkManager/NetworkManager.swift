@@ -85,17 +85,6 @@ struct ErrorResponse: Decodable {
     let message: String
 }
 
-extension Dictionary {
-    func passingQuery() -> String {
-        var finalQueryForm = "?"
-        for element in self {
-            finalQueryForm.append("\(element.key)=\(element.value)&")
-        }
-        finalQueryForm.removeLast()
-        return finalQueryForm
-    }
-}
-
 enum RequestMethod: String {
     case put = "PUT"
     case post = "POST"

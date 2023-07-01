@@ -16,7 +16,7 @@ extension UIViewController {
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
-    func setLocation() {
+    func setPersonalData() {
         let locationImageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
         locationImageview.image = UIImage(named: "LocationIcon")
         let leftImageView = UIBarButtonItem(customView: locationImageview)
