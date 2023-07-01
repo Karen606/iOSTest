@@ -20,9 +20,10 @@ struct Dish: Codable {
     let description: String
     let imageURL: String
     let tegs: [String]
+    var count: Int? = 1
 
     enum CodingKeys: String, CodingKey {
-        case id, name, price, weight, description, tegs
+        case id, name, price, weight, description, tegs, count
         case imageURL = "image_url"
     }
 }

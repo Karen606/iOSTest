@@ -17,7 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="BasketDishTableViewCell" customModule="iOSTest" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="62" id="KGk-i7-Jjw" customClass="BasketDishTableViewCell" customModule="iOSTest" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -31,6 +31,11 @@
                             <constraint firstAttribute="width" constant="62" id="TzU-Wx-3Qu"/>
                             <constraint firstAttribute="height" constant="62" id="o4u-8J-jHr"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yKx-Vv-mdo">
                         <rect key="frame" x="70" y="14" width="67" height="34"/>
@@ -57,6 +62,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="aFS-XN-5wF" firstAttribute="leading" secondItem="nWJ-F5-38x" secondAttribute="trailing" constant="2" id="PuV-Jc-XGy"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                     </stackView>
@@ -113,6 +121,11 @@
                             <constraint firstAttribute="bottom" secondItem="aKU-gG-hVu" secondAttribute="bottom" id="gwf-5r-baZ"/>
                             <constraint firstItem="2py-rY-uWA" firstAttribute="top" secondItem="dZH-mR-fXk" secondAttribute="top" id="jzC-DK-3vi"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="10"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -121,7 +134,7 @@
                     <constraint firstItem="BLs-BK-b9b" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ABu-aP-DtN"/>
                     <constraint firstItem="dZH-mR-fXk" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Aka-Oi-9Sm"/>
                     <constraint firstItem="yKx-Vv-mdo" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="FQO-Dc-dK3"/>
-                    <constraint firstAttribute="trailing" secondItem="BLs-BK-b9b" secondAttribute="trailing" constant="258" id="VHb-0Q-nfH"/>
+                    <constraint firstItem="BLs-BK-b9b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="epE-CC-Ytv"/>
                     <constraint firstAttribute="bottom" secondItem="BLs-BK-b9b" secondAttribute="bottom" id="kiV-TA-DNR"/>
                 </constraints>
             </tableViewCellContentView>
