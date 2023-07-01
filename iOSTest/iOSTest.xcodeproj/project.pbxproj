@@ -28,6 +28,8 @@
 		CE325CC52A4F337600E2F552 /* TegCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE325CC32A4F337600E2F552 /* TegCollectionViewCell.xib */; };
 		CE325CC82A4F344A00E2F552 /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CC72A4F344A00E2F552 /* CategoryViewModel.swift */; };
 		CE325CD22A4F793A00E2F552 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CD12A4F793A00E2F552 /* UIViewController+Extension.swift */; };
+		CE325CD72A500CD500E2F552 /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CD52A500CD400E2F552 /* DishViewController.swift */; };
+		CE325CD82A500CD500E2F552 /* DishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE325CD62A500CD400E2F552 /* DishViewController.xib */; };
 		CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD952A4E264B005A7029 /* AppDelegate.swift */; };
 		CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD972A4E264B005A7029 /* SceneDelegate.swift */; };
 		CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD9E2A4E2650005A7029 /* Assets.xcassets */; };
@@ -59,6 +61,8 @@
 		CE325CC32A4F337600E2F552 /* TegCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TegCollectionViewCell.xib; sourceTree = "<group>"; };
 		CE325CC72A4F344A00E2F552 /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
 		CE325CD12A4F793A00E2F552 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		CE325CD52A500CD400E2F552 /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
+		CE325CD62A500CD400E2F552 /* DishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishViewController.xib; sourceTree = "<group>"; };
 		CE60BD922A4E264B005A7029 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE60BD952A4E264B005A7029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE60BD972A4E264B005A7029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +243,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		CE325CD32A500C9900E2F552 /* Dish */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CD42A500CB200E2F552 /* View */,
+			);
+			path = Dish;
+			sourceTree = "<group>";
+		};
+		CE325CD42A500CB200E2F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CD52A500CD400E2F552 /* DishViewController.swift */,
+				CE325CD62A500CD400E2F552 /* DishViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CE60BD892A4E264B005A7029 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +281,7 @@
 		CE60BD942A4E264B005A7029 /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				CE325CD32A500C9900E2F552 /* Dish */,
 				CE325CAD2A4F1D6300E2F552 /* Extension */,
 				CE325CA42A4F0DA500E2F552 /* NetworkManager */,
 				CE60BDA92A4E2678005A7029 /* TabBarController */,
@@ -352,6 +374,7 @@
 				CE60BDA22A4E2650005A7029 /* LaunchScreen.storyboard in Resources */,
 				CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */,
 				CE325CC52A4F337600E2F552 /* TegCollectionViewCell.xib in Resources */,
+				CE325CD82A500CD500E2F552 /* DishViewController.xib in Resources */,
 				CE60BDAB2A4E270A005A7029 /* TabBarViewController.storyboard in Resources */,
 				CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */,
 			);
@@ -416,6 +439,7 @@
 				CE325CAF2A4F1D7600E2F552 /* UIImageView+Extension.swift in Sources */,
 				CE325C8E2A4EECBC00E2F552 /* TabBarViewController.swift in Sources */,
 				CE325CC42A4F337600E2F552 /* TegCollectionViewCell.swift in Sources */,
+				CE325CD72A500CD500E2F552 /* DishViewController.swift in Sources */,
 				CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */,
 				CE325CA92A4F110D00E2F552 /* CategoriesModel.swift in Sources */,
 				CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */,

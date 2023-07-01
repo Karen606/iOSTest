@@ -119,7 +119,10 @@ extension CategoryViewController: UICollectionViewDelegate {
         case .categories:
             selectedTeg = indexPath
         case .dishes:
-            print(dishes)
+            let dishVC = DishViewController(nibName: "DishViewController", bundle: nil)
+            dishVC.dish = dishes[indexPath.row]
+            dishVC.modalPresentationStyle = .overFullScreen
+            self.present(dishVC, animated: false, completion: nil)
         default:
             return
         }
@@ -134,13 +137,11 @@ extension CategoryViewController: UICollectionViewDelegate {
                 dishesCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
             }
         case .dishes:
-            print(dishes)
+            print("ok")
         default:
             return
         }
     }
-    
-    
 }
 
 extension CategoryViewController: UICollectionViewDataSource {
