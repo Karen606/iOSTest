@@ -8,7 +8,7 @@
 import UIKit
 
 extension UIViewController {
-    func setLocation() {
+    func setPhoto() {
         let profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
         profileImageView.layer.cornerRadius = 100
         profileImageView.image = UIImage(named: "ProfilePhoto")
@@ -16,7 +16,7 @@ extension UIViewController {
         self.navigationItem.rightBarButtonItem = rightButton
     }
     
-    func setPhoto() {
+    func setLocation() {
         let locationImageview = UIImageView(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
         locationImageview.image = UIImage(named: "LocationIcon")
         let leftImageView = UIBarButtonItem(customView: locationImageview)

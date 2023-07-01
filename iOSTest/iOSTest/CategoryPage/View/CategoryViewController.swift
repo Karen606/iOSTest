@@ -9,10 +9,27 @@ import UIKit
 
 class CategoryViewController: UIViewController {
     @IBOutlet weak var dishesCollectionView: UICollectionView!
-    let categoryViewModel = CategoryViewModel()
-    var dishes = [Dish]()
-//    var tegs: Set<String> = []
-    var tegs = [String]()
+    private let categoryViewModel = CategoryViewModel()
+    private var tegs = [String]()
+    private var sortedDishes: [Dish] = [] {
+        didSet {
+            dishesCollectionView.reloadSections([1])
+        }
+    }
+    private var dishes: [Dish] = [] {
+        didSet {
+            dishesCollectionView.reloadData()
+        }
+    }
+    private var selectedTeg: IndexPath? {
+        didSet {
+            if let oldValue = oldValue {
+                dishesCollectionView.deselectItem(at: oldValue, animated: false)
+            }
+            getSortedDishes()
+        }
+    }
+    
     enum Section: Int, CaseIterable {
         case categories
         case dishes
@@ -20,14 +37,15 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let profileImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        profileImageView.layer.cornerRadius = 100
-        profileImageView.image = UIImage(named: "ProfilePhoto")
-        let rightButton = UIBarButtonItem(customView: profileImageView)
-        self.navigationItem.rightBarButtonItem = rightButton
+        setPhoto()
         getDishes()
         setupCollectionView()
         dishesCollectionView.collectionViewLayout = self.createLayout()
+    }
+    
+    func getSortedDishes() {
+        guard let selectedTeg = selectedTeg else { return }
+        sortedDishes = dishes.filter({ $0.tegs.contains(tegs[selectedTeg.row]) })
     }
     
     func getDishes() {
@@ -35,14 +53,14 @@ class CategoryViewController: UIViewController {
             guard let self = self else { return }
             switch result {
             case .success(let data):
-                self.dishes = data.dishes
-                self.dishes.forEach({ $0.tegs.forEach { teg in
+                data.dishes.forEach({ $0.tegs.forEach { teg in
                     if !self.tegs.contains(teg) {
                         self.tegs.append(teg)
                     }
                 }})
-//                self.dishes.forEach({ $0.tegs.forEach({ self.tegs.insert($0 )})})
-                self.dishesCollectionView.reloadData()
+                self.dishes = data.dishes
+                self.selectedTeg = IndexPath(row: 0, section: Section.categories.rawValue)
+                self.dishesCollectionView.selectItem(at: IndexPath(row: 0, section: Section.categories.rawValue), animated: false, scrollPosition: .bottom)
             case .failure(let error):
                 print(error)
             }
@@ -54,10 +72,12 @@ class CategoryViewController: UIViewController {
         dishesCollectionView.dataSource = self
         dishesCollectionView.register(UINib(nibName: DishCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: DishCollectionViewCell.identifier)
         dishesCollectionView.register(UINib(nibName: TegCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: TegCollectionViewCell.identifier)
+        dishesCollectionView.allowsMultipleSelection = true
     }
     
     func createLayout() -> UICollectionViewCompositionalLayout {
-        return UICollectionViewCompositionalLayout { sectionNum, environment in
+        return UICollectionViewCompositionalLayout { [weak self] sectionNum, environment in
+            guard let self = self else { return NSCollectionLayoutSection(group: .init(layoutSize: .init(widthDimension: .absolute(0), heightDimension: .absolute(0)))) }
             let determinedSection = Section(rawValue: sectionNum)
             switch determinedSection {
             case .categories:
@@ -93,6 +113,33 @@ class CategoryViewController: UIViewController {
 }
 
 extension CategoryViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let determinedSection = Section(rawValue: indexPath.section)
+        switch determinedSection {
+        case .categories:
+            selectedTeg = indexPath
+        case .dishes:
+            print(dishes)
+        default:
+            return
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let determinedSection = Section(rawValue: indexPath.section)
+        switch determinedSection {
+        case .categories:
+            guard let selectedTeg = selectedTeg else { return }
+            if selectedTeg == indexPath {
+                dishesCollectionView.selectItem(at: indexPath, animated: false, scrollPosition: .bottom)
+            }
+        case .dishes:
+            print(dishes)
+        default:
+            return
+        }
+    }
+    
     
 }
 
@@ -103,7 +150,7 @@ extension CategoryViewController: UICollectionViewDataSource {
         case .categories:
             return tegs.count
         case .dishes:
-            return dishes.count
+            return sortedDishes.count
         case .none:
             return 0
         }
@@ -122,7 +169,7 @@ extension CategoryViewController: UICollectionViewDataSource {
             return cell
         case .dishes:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DishCollectionViewCell.identifier, for: indexPath) as! DishCollectionViewCell
-            cell.setupContent(dish: dishes[indexPath.row])
+            cell.setupContent(dish: sortedDishes[indexPath.row])
             return cell
         case .none:
             return UICollectionViewCell()
