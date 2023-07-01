@@ -30,6 +30,9 @@
 		CE325CD22A4F793A00E2F552 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CD12A4F793A00E2F552 /* UIViewController+Extension.swift */; };
 		CE325CD72A500CD500E2F552 /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CD52A500CD400E2F552 /* DishViewController.swift */; };
 		CE325CD82A500CD500E2F552 /* DishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE325CD62A500CD400E2F552 /* DishViewController.xib */; };
+		CE325CE02A50235E00E2F552 /* BasketViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CDF2A50235E00E2F552 /* BasketViewViewController.swift */; };
+		CE325CE42A5025D500E2F552 /* BasketDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE325CE22A5025D400E2F552 /* BasketDishTableViewCell.swift */; };
+		CE325CE52A5025D500E2F552 /* BasketDishTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE325CE32A5025D400E2F552 /* BasketDishTableViewCell.xib */; };
 		CE60BD962A4E264B005A7029 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD952A4E264B005A7029 /* AppDelegate.swift */; };
 		CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE60BD972A4E264B005A7029 /* SceneDelegate.swift */; };
 		CE60BD9F2A4E2650005A7029 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE60BD9E2A4E2650005A7029 /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		CE325CD12A4F793A00E2F552 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		CE325CD52A500CD400E2F552 /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
 		CE325CD62A500CD400E2F552 /* DishViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishViewController.xib; sourceTree = "<group>"; };
+		CE325CDF2A50235E00E2F552 /* BasketViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewViewController.swift; sourceTree = "<group>"; };
+		CE325CE22A5025D400E2F552 /* BasketDishTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketDishTableViewCell.swift; sourceTree = "<group>"; };
+		CE325CE32A5025D400E2F552 /* BasketDishTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketDishTableViewCell.xib; sourceTree = "<group>"; };
 		CE60BD922A4E264B005A7029 /* iOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE60BD952A4E264B005A7029 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE60BD972A4E264B005A7029 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -260,6 +266,32 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		CE325CD92A50230E00E2F552 /* Basket */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CE12A50259D00E2F552 /* Cell */,
+				CE325CDA2A50231E00E2F552 /* View */,
+			);
+			path = Basket;
+			sourceTree = "<group>";
+		};
+		CE325CDA2A50231E00E2F552 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CDF2A50235E00E2F552 /* BasketViewViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE325CE12A50259D00E2F552 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CE325CE22A5025D400E2F552 /* BasketDishTableViewCell.swift */,
+				CE325CE32A5025D400E2F552 /* BasketDishTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CE60BD892A4E264B005A7029 = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +313,7 @@
 		CE60BD942A4E264B005A7029 /* iOSTest */ = {
 			isa = PBXGroup;
 			children = (
+				CE325CD92A50230E00E2F552 /* Basket */,
 				CE325CD32A500C9900E2F552 /* Dish */,
 				CE325CAD2A4F1D6300E2F552 /* Extension */,
 				CE325CA42A4F0DA500E2F552 /* NetworkManager */,
@@ -371,6 +404,7 @@
 				CE325CBF2A4F2F7700E2F552 /* DishCollectionViewCell.xib in Resources */,
 				CE325CA32A4F0BEB00E2F552 /* CategoriesTableViewCell.xib in Resources */,
 				CE325C942A4F09C400E2F552 /* SFProDisplay-Medium.OTF in Resources */,
+				CE325CE52A5025D500E2F552 /* BasketDishTableViewCell.xib in Resources */,
 				CE60BDA22A4E2650005A7029 /* LaunchScreen.storyboard in Resources */,
 				CE325C982A4F0A2F00E2F552 /* SFProDisplay-Regular.ttf in Resources */,
 				CE325CC52A4F337600E2F552 /* TegCollectionViewCell.xib in Resources */,
@@ -435,6 +469,7 @@
 				CE325CAC2A4F11FC00E2F552 /* MainPageViewModel.swift in Sources */,
 				CE325CA62A4F0DC100E2F552 /* NetworkManager.swift in Sources */,
 				CE325CBA2A4F2A6B00E2F552 /* DishesModel.swift in Sources */,
+				CE325CE02A50235E00E2F552 /* BasketViewViewController.swift in Sources */,
 				CE325C9B2A4F0B6300E2F552 /* MainPageViewController.swift in Sources */,
 				CE325CAF2A4F1D7600E2F552 /* UIImageView+Extension.swift in Sources */,
 				CE325C8E2A4EECBC00E2F552 /* TabBarViewController.swift in Sources */,
@@ -445,6 +480,7 @@
 				CE60BD982A4E264B005A7029 /* SceneDelegate.swift in Sources */,
 				CE325CBE2A4F2F7700E2F552 /* DishCollectionViewCell.swift in Sources */,
 				CE325CA22A4F0BEB00E2F552 /* CategoriesTableViewCell.swift in Sources */,
+				CE325CE42A5025D500E2F552 /* BasketDishTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
